@@ -26,16 +26,17 @@ public class MyLayouts extends JPanel implements ActionListener {
 		blueButton = new JButton("Blue");
 		yellowButton = new JButton("Yellow");
 		
-		
 		redButton.addActionListener(this);
 		greenButton.addActionListener(this);
 		blueButton.addActionListener(this);
 		yellowButton.addActionListener(this);
-				
-		this.add(redButton);
-		this.add(greenButton);
-		this.add(blueButton);
-		this.add(yellowButton);
+		
+		this.setLayout(new BorderLayout());
+		
+		this.add(redButton, BorderLayout.NORTH);
+		this.add(greenButton, BorderLayout.SOUTH);
+		this.add(blueButton, BorderLayout.EAST);
+		this.add(yellowButton, BorderLayout.WEST);
 	}
 	
 	public void actionPerformed(ActionEvent event) {
