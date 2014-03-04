@@ -32,11 +32,12 @@ public class MyLayouts extends JPanel implements ActionListener {
 		yellowButton.addActionListener(this);
 		
 		this.setLayout(new BorderLayout());
-		
-		this.add(redButton, BorderLayout.NORTH);
-		this.add(greenButton, BorderLayout.SOUTH);
-		this.add(blueButton, BorderLayout.EAST);
-		this.add(yellowButton, BorderLayout.WEST);
+		JPanel buttons = new JPanel();
+		buttons.add(redButton, BorderLayout.NORTH);
+		buttons.add(greenButton, BorderLayout.SOUTH);
+		buttons.add(blueButton, BorderLayout.EAST);
+		buttons.add(yellowButton, BorderLayout.WEST);
+		this.add(buttons, BorderLayout.SOUTH);
 	}
 	
 	public void actionPerformed(ActionEvent event) {
