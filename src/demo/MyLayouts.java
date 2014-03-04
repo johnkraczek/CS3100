@@ -1,8 +1,8 @@
 package demo;
 
-import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.EventQueue;
+import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -31,14 +31,12 @@ public class MyLayouts extends JPanel implements ActionListener {
 		blueButton.addActionListener(this);
 		yellowButton.addActionListener(this);
 		
-		this.setLayout(new BorderLayout());
-		JPanel buttons = new JPanel();
-		buttons.setOpaque(false);
-		buttons.add(redButton, BorderLayout.NORTH);
-		buttons.add(greenButton, BorderLayout.SOUTH);
-		buttons.add(blueButton, BorderLayout.EAST);
-		buttons.add(yellowButton, BorderLayout.WEST);
-		this.add(buttons, BorderLayout.SOUTH);
+		this.setLayout(new GridLayout(3,3));
+		this.add(redButton);
+		this.add(greenButton);
+		this.add(blueButton);
+		this.add(yellowButton);
+
 	}
 	
 	public void actionPerformed(ActionEvent event) {
