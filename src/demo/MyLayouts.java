@@ -33,6 +33,7 @@ public class MyLayouts extends JPanel implements ActionListener {
 		
 		this.setLayout(new BorderLayout());
 		JPanel buttons = new JPanel();
+		buttons.setOpaque(false);
 		buttons.add(redButton, BorderLayout.NORTH);
 		buttons.add(greenButton, BorderLayout.SOUTH);
 		buttons.add(blueButton, BorderLayout.EAST);
