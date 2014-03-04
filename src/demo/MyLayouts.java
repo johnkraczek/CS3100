@@ -1,5 +1,6 @@
 package demo;
 
+import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
@@ -30,21 +31,7 @@ public class MyLayouts extends JPanel implements ActionListener {
 		greenButton.addActionListener(this);
 		blueButton.addActionListener(this);
 		yellowButton.addActionListener(this);
-		
-		this.setLayout(null);
-		
-		this.redButton.setSize(100,30);
-		this.redButton.setLocation(100, 0);
-		
-		this.greenButton.setSize(100,30);
-		this.greenButton.setLocation(100, 30);
-		
-		this.blueButton.setSize(100,30);
-		this.blueButton.setLocation(0, 30);
-		
-		this.yellowButton.setSize(100,30);
-		this.yellowButton.setLocation(0, 0);
-		
+				
 		this.add(redButton);
 		this.add(greenButton);
 		this.add(blueButton);
@@ -59,7 +46,10 @@ public class MyLayouts extends JPanel implements ActionListener {
 			this.setBackground(Color.GREEN);
 		}else if(source == blueButton){
 			this.setBackground(Color.BLUE);
+		}else if(source == yellowButton){
+			this.setBackground(Color.YELLOW);
 		}
+		
 	}
 	
 	public static void main(String[] args) {
