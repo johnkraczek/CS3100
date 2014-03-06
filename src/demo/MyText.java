@@ -4,11 +4,14 @@ import java.awt.Color;
 import java.awt.EventQueue;
 import java.awt.Font;
 
+import javax.swing.BorderFactory;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
+import javax.swing.border.BevelBorder;
+import javax.swing.border.Border;
 
 public class MyText extends JPanel {
 	private static final long serialVersionUID = 1L;
@@ -33,6 +36,9 @@ public class MyText extends JPanel {
 		});
 		this.add(scroll);
 
+		Border border = BorderFactory.createBevelBorder(BevelBorder.LOWERED);
+		scroll.setBorder(border);
+		
 	}
 
 	public static void main(String[] args) {
