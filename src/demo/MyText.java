@@ -1,5 +1,6 @@
 package demo;
 
+import java.awt.Color;
 import java.awt.EventQueue;
 import java.awt.Font;
 
@@ -11,9 +12,9 @@ public class MyText extends JPanel {
 	private static final long serialVersionUID = 1L;
 	
 	public MyText(){
-	JLabel label = new JLabel("Hello World");
-	label.setFont(new Font("Comic Sans MS", Font.BOLD, 24));
-	label.setText("YEAH");
+	JLabel label = new JLabel("<html><b> Hello World </b></html>");
+	label.setFont(new Font("Comic Sans MS", Font.ITALIC, 24));
+	label.setForeground(Color.RED);
 	this.add(label);
 	}
 	
