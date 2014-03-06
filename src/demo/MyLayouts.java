@@ -36,7 +36,6 @@ public class MyLayouts extends JPanel implements ActionListener {
 		this.add(greenButton);
 		this.add(blueButton);
 		this.add(yellowButton);
-
 	}
 	
 	public void actionPerformed(ActionEvent event) {
