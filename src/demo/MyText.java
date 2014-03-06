@@ -7,6 +7,7 @@ import java.awt.Font;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JTextArea;
 
 public class MyText extends JPanel {
 	private static final long serialVersionUID = 1L;
@@ -16,6 +17,13 @@ public class MyText extends JPanel {
 	label.setFont(new Font("Comic Sans MS", Font.ITALIC, 24));
 	label.setForeground(Color.RED);
 	this.add(label);
+	
+	JTextArea text = new JTextArea(3,20);
+	text.setText("The quick brown fox jumped over the lazy dog.The quick brown fox jumped over the lazy dog.The quick brown fox jumped over the lazy dog.The quick brown fox jumped over the lazy dog.The quick brown fox jumped over the lazy dog.The quick brown fox jumped over the lazy dog.The quick brown fox jumped over the lazy dog.The quick brown fox jumped over the lazy dog.The quick brown fox jumped over the lazy dog.The quick brown fox jumped over the lazy dog.");
+	text.setLineWrap(true);
+	text.setWrapStyleWord(true);
+	this.add(text);
+	
 	}
 	
 
