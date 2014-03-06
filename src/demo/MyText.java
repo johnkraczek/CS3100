@@ -24,8 +24,13 @@ public class MyText extends JPanel {
 		text.setLineWrap(true);
 		text.setWrapStyleWord(true);
 		
-		JScrollPane scroll = new JScrollPane(text);
-		text.setCaretPosition(0);
+		final JScrollPane scroll = new JScrollPane(text);
+		
+		EventQueue.invokeLater(new Runnable() {
+			public void run(){
+				scroll.getVerticalScrollBar().setValue(0);
+			}
+		});
 		this.add(scroll);
 
 	}
