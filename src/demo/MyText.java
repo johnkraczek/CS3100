@@ -13,7 +13,6 @@ public class MyText extends JPanel {
 	public MyText(){
 	JLabel label = new JLabel("Hello World");
 	label.setFont(new Font("Comic Sans MS", Font.BOLD, 24));
-	this.add(label);
 	label.setText("YEAH");
 	this.add(label);
 	}
