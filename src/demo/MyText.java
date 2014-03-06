@@ -10,7 +10,6 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
-import javax.swing.border.BevelBorder;
 import javax.swing.border.Border;
 
 public class MyText extends JPanel {
@@ -36,9 +35,14 @@ public class MyText extends JPanel {
 		});
 		this.add(scroll);
 
-		Border border = BorderFactory.createBevelBorder(BevelBorder.LOWERED);
-		scroll.setBorder(border);
+		//Border border = BorderFactory.createBevelBorder(BevelBorder.LOWERED); 
+		//Border border = BorderFactory.createEtchedBorder(EtchedBorder.RAISED);
+		//Border border = BorderFactory.createLineBorder(Color.BLUE, 4);
+		//Border border = BorderFactory.createMatteBorder(6,0,6,0, Color.BLUE);
+		Border border = BorderFactory.createEmptyBorder(20,0,0,0); // this is useful for positioning
 		
+		scroll.setBorder(border);
+		scroll.setOpaque(false);
 	}
 
 	public static void main(String[] args) {
